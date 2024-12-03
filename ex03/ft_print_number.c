@@ -1,49 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test1.c                                            :+:      :+:    :+:   */
+/*   ft_print_number.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rgiragos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/03 12:46:11 by rgiragos          #+#    #+#             */
-/*   Updated: 2024/12/03 12:51:35 by rgiragos         ###   ########.fr       */
+/*   Created: 2024/12/01 13:55:12 by rgiragos          #+#    #+#             */
+/*   Updated: 2024/12/03 16:10:37 by rgiragos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	print(int a)
+void	ft_print_number(void)
 {
-	char	chr[3];
-
-	chr[0] = (a / 10) + '0';
-	chr[1] = (a % 10) + '0';
-	chr[2] = ' ';
-	write(1, &chr, 3);
+	write(1, "0123456789", 10);
 }
 
-void	ft_print_comb2(void)
+/*int	main(void)
 {
-	int	c;
-	int	x;
-
-	c = 0;
-	while (c < 100)
-	{
-		x = 0;
-		while(x < 100)
-		{
-			print(x);
-			print(c);
-			x++;
-			write(1, ",", 1);
-		}
-		c++;
-	}
-}
-
-void	main(void)
-{
-	ft_print_comp2();
+	ft_print_number();
 	return (0);
-}
+}*/

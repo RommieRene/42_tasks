@@ -1,49 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test1.c                                            :+:      :+:    :+:   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rgiragos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/03 12:46:11 by rgiragos          #+#    #+#             */
-/*   Updated: 2024/12/03 12:51:35 by rgiragos         ###   ########.fr       */
+/*   Created: 2024/12/01 17:48:14 by rgiragos          #+#    #+#             */
+/*   Updated: 2024/12/03 13:31:36 by rgiragos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include <unistd.h>
 
-void	print(int a)
+void	ft_print_comb(void)
 {
-	char	chr[3];
+	char	n;
+	char	m;
+	char	k;
 
-	chr[0] = (a / 10) + '0';
-	chr[1] = (a % 10) + '0';
-	chr[2] = ' ';
-	write(1, &chr, 3);
-}
-
-void	ft_print_comb2(void)
-{
-	int	c;
-	int	x;
-
-	c = 0;
-	while (c < 100)
+	n = '0';
+	while (n < '7')
 	{
-		x = 0;
-		while(x < 100)
+		m = n + 1;
+		while (m < '8')
 		{
-			print(x);
-			print(c);
-			x++;
-			write(1, ",", 1);
+			k = m + 1;
+			while (k < '9')
+			{
+				write(1, &n, 1);
+				write(1, &m, 1);
+				write(1, &k, 1);
+				write(1, ", ", 2);
+				k++;
+			}
+			m++;
 		}
-		c++;
+		n++;
 	}
 }
-
-void	main(void)
+/*int	main()
 {
-	ft_print_comp2();
+	ft_print_comb();
 	return (0);
-}
+}*/

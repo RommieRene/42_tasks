@@ -1,49 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test1.c                                            :+:      :+:    :+:   */
+/*   ft_putchar_alphabet.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rgiragos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/03 12:46:11 by rgiragos          #+#    #+#             */
-/*   Updated: 2024/12/03 12:51:35 by rgiragos         ###   ########.fr       */
+/*   Created: 2024/12/01 13:40:03 by rgiragos          #+#    #+#             */
+/*   Updated: 2024/12/03 16:07:44 by rgiragos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	print(int a)
+void	ft_putchar_alphabet(void)
 {
-	char	chr[3];
+	char	a;
 
-	chr[0] = (a / 10) + '0';
-	chr[1] = (a % 10) + '0';
-	chr[2] = ' ';
-	write(1, &chr, 3);
-}
-
-void	ft_print_comb2(void)
-{
-	int	c;
-	int	x;
-
-	c = 0;
-	while (c < 100)
+	a = 'a';
+	while (a <= 'z')
 	{
-		x = 0;
-		while(x < 100)
-		{
-			print(x);
-			print(c);
-			x++;
-			write(1, ",", 1);
-		}
-		c++;
+		write(1, &a, 1);
+		a++;
 	}
 }
-
-void	main(void)
+/*
+int	main(void)
 {
-	ft_print_comp2();
+	ft_putchar_alphabet();
 	return (0);
-}
+}*/

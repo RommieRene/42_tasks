@@ -6,7 +6,7 @@
 /*   By: rgiragos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 12:46:11 by rgiragos          #+#    #+#             */
-/*   Updated: 2024/12/03 12:51:35 by rgiragos         ###   ########.fr       */
+/*   Updated: 2024/12/03 16:12:55 by rgiragos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	print(int a)
 
 	chr[0] = (a / 10) + '0';
 	chr[1] = (a % 10) + '0';
-	chr[2] = ' ';
+	chr[2] = ',';
 	write(1, &chr, 3);
 }
 
@@ -31,19 +31,19 @@ void	ft_print_comb2(void)
 	while (c < 100)
 	{
 		x = 0;
-		while(x < 100)
+		while (x < 100)
 		{
 			print(x);
 			print(c);
 			x++;
-			write(1, ",", 1);
+			write(1, " ", 1);
 		}
 		c++;
 	}
 }
-
-void	main(void)
+/*
+int	main(void)
 {
-	ft_print_comp2();
+	ft_print_comb2();
 	return (0);
-}
+}*/

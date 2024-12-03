@@ -1,49 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test1.c                                            :+:      :+:    :+:   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rgiragos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/03 12:46:11 by rgiragos          #+#    #+#             */
-/*   Updated: 2024/12/03 12:51:35 by rgiragos         ###   ########.fr       */
+/*   Created: 2024/12/01 16:35:15 by rgiragos          #+#    #+#             */
+/*   Updated: 2024/12/03 13:35:19 by rgiragos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
-void	print(int a)
+void	ft_is_negative(int n)
 {
-	char	chr[3];
-
-	chr[0] = (a / 10) + '0';
-	chr[1] = (a % 10) + '0';
-	chr[2] = ' ';
-	write(1, &chr, 3);
-}
-
-void	ft_print_comb2(void)
-{
-	int	c;
-	int	x;
-
-	c = 0;
-	while (c < 100)
+	if (n < 0)
 	{
-		x = 0;
-		while(x < 100)
-		{
-			print(x);
-			print(c);
-			x++;
-			write(1, ",", 1);
-		}
-		c++;
+		write(1, "N\n", 2);
+	}
+	else
+	{
+		write(1, "P\n", 2);
 	}
 }
+/*
+int	main() {
+    int number;
 
-void	main(void)
-{
-	ft_print_comp2();
-	return (0);
-}
+    printf("Enter an integer: ");
+    scanf("%d", &number);
+
+    ft_is_negative(number);
+
+    return 0;
+}*/
