@@ -1,44 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*   ft_ultimate_ft.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rgiragos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/01 17:48:14 by rgiragos          #+#    #+#             */
-/*   Updated: 2024/12/03 13:31:36 by rgiragos         ###   ########.fr       */
+/*   Created: 2024/12/05 14:01:05 by rgiragos          #+#    #+#             */
+/*   Updated: 2024/12/05 21:41:46 by rgiragos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <unistd.h>
 
-void	ft_print_comb(void)
+void	ft_ultimate_ft(int *********nbr)
 {
-	char	n;
-	char	m;
-	char	k;
-
-	n = '0';
-	while (n < '7')
-	{
-		m = n + 1;
-		while (m < '8')
-		{
-			k = m + 1;
-			while (k < '9')
-			{
-				write(1, &n, 1);
-				write(1, &m, 1);
-				write(1, &k, 1);
-				write(1, ", ", 2);
-				k++;
-			}
-			m++;
-		}
-		n++;
-	}
+	*********nbr = 42;
 }
-/*int	main()
-{
-	ft_print_comb();
-	return (0);
-}*/
