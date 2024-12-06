@@ -22,8 +22,25 @@ void ft_rev_int_tab(int *tab, int size)
     }
     return (count);
     rev = *tab;
-    i = count - 0;
- 
+    i = count - 1;
+    while(i >= 0)
+    {   *tab[i] = rev[i];
+        i--;
+        
+        }
+}
+
+int main()
+{   
+    char c[] = {1,2,3,4,5,6,7,8};
+    ft_rev_int_tab(c, 8);
+    return (0);
+    }
+    
+
+
+
+
 
 
 	
