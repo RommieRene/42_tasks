@@ -6,42 +6,26 @@
 /*   By: rgiragos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 23:04:39 by rgiragos          #+#    #+#             */
-/*   Updated: 2024/12/05 23:15:45 by rgiragos         ###   ########.fr       */
+/*   Updated: 2024/12/06 13:12:27 by rgiragos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void ft_rev_int_tab(int *tab, int size)
+void    ft_rev_int_tab(int  *tab, int   size)
 {
-    int x;
-	int	*rev;
-	int i;
-    rev = tab;
-    i = size - 1;
-    x = 0;
-    while(i > x)
-    {   tab[x] = rev[i];
-        i--;
-        x++;
-        printf("%d%d",tab[x],tab[i]);
-    }
-    
+	int start;
+	int temp;
+	int end;
 
+	start = 0;
+	end = size - 1;
+	while (start < end)
+	{
+		temp = tab[start];
+		tab[start] = tab[end];
+		tab [end] = temp;
+		start++;
+		end--;
+	}
 }
-
-int main(void)
-{   
-    int c[] = {1,2,3,4,5,6,7,8};
-    ft_rev_int_tab(c, 8);
-
-    return (0);
-    }
-    
-
-
-
-
-
-
-	
