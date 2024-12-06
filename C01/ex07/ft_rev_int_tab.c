@@ -10,30 +10,31 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+
 void ft_rev_int_tab(int *tab, int size)
 {
-	int	rev;
+    int x;
+	int	*rev;
 	int i;
-    int count;
-    count = 0;
-    while(size[count] != '\0')
-    {
-        count++;
-    }
-    return (count);
-    rev = *tab;
-    i = count - 1;
-    while(i >= 0)
-    {   *tab[i] = rev[i];
+    rev = tab;
+    i = size - 1;
+    x = 0;
+    while(i > x)
+    {   tab[x] = rev[i];
         i--;
-        
-        }
+        x++;
+        printf("%d%d",tab[x],tab[i]);
+    }
+    
+
 }
 
-int main()
+int main(void)
 {   
-    char c[] = {1,2,3,4,5,6,7,8};
+    int c[] = {1,2,3,4,5,6,7,8};
     ft_rev_int_tab(c, 8);
+
     return (0);
     }
     
