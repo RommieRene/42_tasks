@@ -10,11 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+<<<<<<< HEAD
 void	ft_rev_int_tab(int *tab, int size)
 {
 	int		start;
 	int		temp;
 	int		end;
+=======
+#include <stdio.h>
+
+void    ft_rev_int_tab(int  *tab, int   size)
+{
+	int start;
+	int temp;
+	int end;
+>>>>>>> 0f6d13fe774470d85f54d00cb23bc307d9772d05
 
 	start = 0;
 	end = size - 1;
