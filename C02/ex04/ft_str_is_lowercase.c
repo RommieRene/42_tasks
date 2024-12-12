@@ -6,16 +6,20 @@
 /*   By: rgiragos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 18:39:58 by rgiragos          #+#    #+#             */
-/*   Updated: 2024/12/10 21:29:09 by rgiragos         ###   ########.fr       */
+/*   Updated: 2024/12/12 22:53:37 by rgiragos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_str_is_lowercase(char *str)
 {
-	while (*str)
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
 	{
-		if (*str++ < 'a' || *str++ > 'z')
+		if (str[i] < 'a' || str[i] > 'z')
 			return (0);
+		i++;
 	}
 	return (1);
 }

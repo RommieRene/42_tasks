@@ -6,17 +6,20 @@
 /*   By: rgiragos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/09 15:57:34 by rgiragos          #+#    #+#             */
-/*   Updated: 2024/12/12 14:15:44 by rgiragos         ###   ########.fr       */
+/*   Updated: 2024/12/12 22:51:59 by rgiragos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_str_is_numeric(char *str)
 {
-	while (*str)
+	int	i;
+
+	i = 0;
+	while (str[i] != 0)
 	{
-		if (*str <= '0' || *str >= '9')
+		if (str[i] < '0' || str[i] > '9')
 			return (0);
-		str++;
+		i++;
 	}
 	return (1);
 }
