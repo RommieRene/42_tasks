@@ -6,18 +6,17 @@
 /*   By: rgiragos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/05 21:39:10 by rgiragos          #+#    #+#             */
-/*   Updated: 2024/12/05 22:20:41 by rgiragos         ###   ########.fr       */
+/*   Updated: 2024/12/09 11:28:11 by rgiragos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
+
 void	ft_putstr(char *str)
 {
-	char	i;
-
-	i = 0;
-	while (str[i] != '\0')
+	while (*str)
 	{
-		write(1, &str[i], 1);
-		i++;
+		write(1, str, 1);
+		str++;
 	}
 }

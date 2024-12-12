@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_number.c                                  :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rgiragos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/01 13:55:12 by rgiragos          #+#    #+#             */
-/*   Updated: 2024/12/03 16:10:37 by rgiragos         ###   ########.fr       */
+/*   Created: 2024/12/10 02:43:03 by rgiragos          #+#    #+#             */
+/*   Updated: 2024/12/10 21:34:56 by rgiragos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_number(void)
+char	*ft_strlowcase(char *str)
 {
-	write(1, "0123456789", 10);
+	int	index;
+
+	index = 0;
+	while (str[index])
+	{
+		if (str[index] >= 'A' && str[index] <= 'Z')
+		{
+			str[index] += 32;
+		}
+		index++;
+	}
+	return (str);
 }
-
-/*int	main(void)
-{
-	ft_print_number();
-	return (0);
-}*/

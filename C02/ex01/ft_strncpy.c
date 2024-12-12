@@ -1,16 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rgiragos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/05 13:44:46 by rgiragos          #+#    #+#             */
-/*   Updated: 2024/12/08 14:25:49 by rgiragos         ###   ########.fr       */
+/*   Created: 2024/12/09 14:07:33 by rgiragos          #+#    #+#             */
+/*   Updated: 2024/12/12 14:10:55 by rgiragos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_ft(int *nbr)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	*nbr = 42;
+	unsigned int	i;
+
+	i = 0;
+	while (i < n)
+	{
+		if (src[i] != '\0')
+		{
+			dest[i] = src[i];
+		}
+		else
+		{
+			dest[i] = '\0';
+		}
+		i++;
+	}
+	return (dest);
 }

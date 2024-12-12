@@ -1,31 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_alphabet.c                              :+:      :+:    :+:   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rgiragos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/01 13:40:03 by rgiragos          #+#    #+#             */
-/*   Updated: 2024/12/03 16:07:44 by rgiragos         ###   ########.fr       */
+/*   Created: 2024/12/09 15:57:34 by rgiragos          #+#    #+#             */
+/*   Updated: 2024/12/12 14:15:44 by rgiragos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar_alphabet(void)
+int	ft_str_is_numeric(char *str)
 {
-	char	a;
-
-	a = 'a';
-	while (a <= 'z')
+	while (*str)
 	{
-		write(1, &a, 1);
-		a++;
+		if (*str <= '0' || *str >= '9')
+			return (0);
+		str++;
 	}
+	return (1);
 }
-/*
-int	main(void)
-{
-	ft_putchar_alphabet();
-	return (0);
-}*/

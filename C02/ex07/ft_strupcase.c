@@ -1,16 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rgiragos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/05 13:44:46 by rgiragos          #+#    #+#             */
-/*   Updated: 2024/12/08 14:25:49 by rgiragos         ###   ########.fr       */
+/*   Created: 2024/12/10 00:43:53 by rgiragos          #+#    #+#             */
+/*   Updated: 2024/12/12 14:19:16 by rgiragos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_ft(int *nbr)
+char	*ft_strupcase(char *str)
 {
-	*nbr = 42;
+	int	index;
+
+	index = 0;
+	while (str[index])
+	{
+		if (str[index] >= 'a' && str[index] <= 'z')
+		{
+			str[index] -= 32;
+		}
+		index++;
+	}
+	return (str);
 }

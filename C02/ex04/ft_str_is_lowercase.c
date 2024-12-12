@@ -1,31 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_reverse_alphabet.c                      :+:      :+:    :+:   */
+/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rgiragos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/01 13:50:16 by rgiragos          #+#    #+#             */
-/*   Updated: 2024/12/03 16:10:09 by rgiragos         ###   ########.fr       */
+/*   Created: 2024/12/09 18:39:58 by rgiragos          #+#    #+#             */
+/*   Updated: 2024/12/10 21:29:09 by rgiragos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar_reverse_alphabet(void)
+int	ft_str_is_lowercase(char *str)
 {
-	char	z;
-
-	z = 'z';
-	while (z > 'a')
+	while (*str)
 	{
-		write(1, &z, 1);
-		z--;
+		if (*str++ < 'a' || *str++ > 'z')
+			return (0);
 	}
+	return (1);
 }
-/*
-int	main(void)
-{
-	ft_putchar_reverse_alphabet();
-	return (0);
-}*/

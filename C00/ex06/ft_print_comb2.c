@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test1.c                                            :+:      :+:    :+:   */
+/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rgiragos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/03 12:46:11 by rgiragos          #+#    #+#             */
-/*   Updated: 2024/12/03 16:12:55 by rgiragos         ###   ########.fr       */
+/*   Created: 2024/12/04 11:18:52 by rgiragos          #+#    #+#             */
+/*   Updated: 2024/12/05 11:58:00 by rgiragos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,11 @@
 
 void	print(int a)
 {
-	char	chr[3];
+	char	chr[2];
 
 	chr[0] = (a / 10) + '0';
 	chr[1] = (a % 10) + '0';
-	chr[2] = ',';
-	write(1, &chr, 3);
+	write(1, &chr, 2);
 }
 
 void	ft_print_comb2(void)
@@ -33,17 +32,12 @@ void	ft_print_comb2(void)
 		x = 0;
 		while (x < 100)
 		{
-			print(x);
 			print(c);
-			x++;
 			write(1, " ", 1);
+			print(x);
+			x++;
+			write(1, ", ", 2);
 		}
 		c++;
 	}
 }
-/*
-int	main(void)
-{
-	ft_print_comb2();
-	return (0);
-}*/
